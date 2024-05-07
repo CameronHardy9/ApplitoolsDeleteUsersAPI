@@ -1,0 +1,16 @@
+{
+  "name": "applitools-delete-users-api",
+  "version": "1.0.0",
+  "description": "Bulk delete users from an Applitools Org.",
+  "type": "module",
+  "main": "deleteUsers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Cameron Hardy",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "1.6.8"
+  }
+}
