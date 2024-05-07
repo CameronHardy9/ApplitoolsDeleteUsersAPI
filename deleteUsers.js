@@ -5,7 +5,7 @@ import users from './users.js';
 const orgId = 'YOUR_ORG_ID'; 
 const userIds = users; 
 const apiKey = process.env.APPLITOOLS_API_KEY;
-const rootUrl = 'https://eyes.applitools.com';  // Update rootUrl if private cloud
+const baseUrl = 'https://eyes.applitools.com';  // Update baseUrl if private cloud
 
 
 // Run `node deleteUsers.js` when all variables are set and you are ready to run the script
@@ -15,7 +15,7 @@ async function deleteUser(orgId, userIds, apiKey) {
     const failures = [];
 
     for (const userId of userIds) {
-        const url = `${rootUrl}/api/Admin/orgs/${orgId}/users/${userId}?apiKey=${apiKey}`;
+        const url = `${baseUrl}/api/Admin/orgs/${orgId}/users/${userId}?apiKey=${apiKey}`;
         
         try {
             const response = await axios.delete(url);
